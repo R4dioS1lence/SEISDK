@@ -1,6 +1,7 @@
 # Space Engineers Ingame Scripts Development Kit
 
 This is a development kit that works on both Windows and Linux for creating Ingame Scripts for the [Space Engineers](https://www.spaceengineersgame.com) game.
+
 The script based on reksar's Toolkit (that didn't work for me) and the invaluable help of Insane Monkey Posse.
 
 **Features**
@@ -48,17 +49,24 @@ Then enter a name for your new script. It must be both a valid directory name an
 
 On an open script, run a Build Task on VS Code through either the shortcut `Ctrl + Shift + B` or `Terminal`->`Run Task...`->`Run Build Task`. This will deploy that script to the game files.
 
+If a script already exists on the destination, the older version is converted to a .backup file, rewriting any other .backup that already exists.
+
 # TO-DO List
 
 * Add Linux version of `create`, `deploy` and `update_game_path` scripts
 
-# Final Disclaime
+# Final Disclaimer
 
 Finding toolkits and even explanations on how to get things going was such a pain, that I was about to give up scripting for this game.
+
 After trying to get information on how to not use Timer Blocks on Steam Discussions, in hope I would end up getting turned into the right direction, I learned that auto-updating was patched in 2017, removing the need for them (I was only finding results THAT old).
 Then, from searching the method used for auto-updating, I ran into [this project](https://github.com/gregretkowski/VSC-SE), last updated on 2018 that didn't work for me, and later after that, [this other project](https://github.com/reksar/SpaceEngineers), last updated on 2021 (NEW!) that still didn't work for me (*grumbling noises*).
+
 Then, on the [Space Engineers Discord](https://discord.com/invite/keenswh), I got helped by the insanely helpful Insane Monkey Posse, that helped me correct the .csproj file and understand the basics until I was good enough to bash my head against the keyboard and successfully  generate a Hello World.
+
 Since one of the problems that I ran into was the VS Code trying to run batch scripts into a Powershell, and another was not having downloaded Git for Windows because the configuration scripts needed a steam text editor that was bundled on it, I decided to rewrite the batch scripts into Powershell scripts, which also removed the need for Git's bundled stream text editor (Powershell can do that).
+
 I never did Powershell stuff, so expect it to be ugly if you know your way around it.
+
 I also wanted to make this project a Windows + Linux option, since VS Code is nice enough to make you able to make Tasks that can run differently on either OS, while developing for both at the same time (used this a lot when learning Javascript with VS Code).
 There may be enough scripts available around the Steam's Workshop, but I don't care. The whole premise about this game is for players to create, that's what I'll do, and that's what this project intends to make it easier for people to do too (at least on scripting side).
