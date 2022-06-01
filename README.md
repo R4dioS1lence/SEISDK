@@ -14,8 +14,8 @@ The script based on reksar's Toolkit (that didn't work for me) and the invaluabl
 ## Programs, Extensions and SDKs Needed to use the Toolkit
 
 * [VS Code](https://code.visualstudio.com/)
-  * [C# Extension] (https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
-  * [NuGet Package Manager] (https://marketplace.visualstudio.com/items?itemName=jmrog.vscode-nuget-package-manager)
+  * [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+  * [NuGet Package Manager](https://marketplace.visualstudio.com/items?itemName=jmrog.vscode-nuget-package-manager)
 * [.NET SDK](https://dotnet.microsoft.com/)
 
 VS Code requires both extensions: `C#` to make it understand C# code and apply IntelliSense; and `NuGet Package Manager` to help it understand and apply the game's DLLs via the .csproj (?).
