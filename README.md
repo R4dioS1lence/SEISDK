@@ -4,6 +4,8 @@ This is a development kit that works on both Windows and Linux for creating Inga
 
 The script based on reksar's Toolkit (that didn't work for me) and the invaluable help of Insane Monkey Posse.
 
+A "HelloWorldWithRuntime" script is given as a ready-to-deploy example. It will target a block called "target" with two text surfaces (use a Programmable Block as target), and implement a "spinning top" using characters.
+
 **Features**
 * [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) for the game API (DLLs are plugged in via `SpaceEngineers.csproj` file)
 * Automated configuration of the environment with the game installation path via VS Code Task
