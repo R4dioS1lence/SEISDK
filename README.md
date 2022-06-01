@@ -1,6 +1,7 @@
 # Space Engineers Ingame Scripts Development Kit
 
-This is a development kit that works on both Windows and Linux for creating Ingame Scripts for the [Space Engineers](https://www.spaceengineersgame.com) game based on reksar's Toolkit (that didn't work for me) and the invaluable help of Insane Monkey Posse.
+This is a development kit that works on both Windows and Linux for creating Ingame Scripts for the [Space Engineers](https://www.spaceengineersgame.com) game.
+The script based on reksar's Toolkit (that didn't work for me) and the invaluable help of Insane Monkey Posse.
 
 **Features**
 * [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) for the game API (DLLs are plugged in via `SpaceEngineers.csproj` file)
