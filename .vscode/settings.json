@@ -1,0 +1,14 @@
+{
+
+"files.exclude": {
+    "bin/": true,
+    "obj/": true
+},
+"cSpell.words": [
+    "csporj",
+    "Ingame",
+    "reksar's",
+    "toolkits"
+]
+
+}

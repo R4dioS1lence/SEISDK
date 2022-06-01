@@ -1,0 +1,80 @@
+{
+
+// See https://go.microsoft.com/fwlink/?LinkId=733558
+// for the documentation about the tasks.json format
+"version": "2.0.0",
+"tasks": [
+    {
+        "label": "Deploy Space Engineers script",
+        "type": "shell",
+        "windows": {
+            "command": "utils\\deploy.ps1",
+            "args": [
+                "${fileDirname}\\${fileBasename}",
+                "${fileBasename}",
+                "${relativeFileDirname}"
+            ]
+        },
+        "linux": {
+            "command": "./utils/deploy.sh",
+            "args": [
+                "${fileDirname}\\${fileBasename}",
+                "${fileBasename}",
+                "${relativeFileDirname}"
+            ]
+        },
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "problemMatcher": []
+    },
+    {
+        "label": "Create Space Engineers script",
+        "type": "shell",
+        "windows": {
+            "command": "utils\\create.ps1",
+            "args": [
+                "${input:dirname}"
+            ]
+        },
+        "linux": {
+            "command": "./utils/create.sh",
+            "args": [
+                "${input:dirname}"
+            ]
+        },
+        "problemMatcher": []
+    },
+    {
+        "label": "Update SpaceEngineers.csporj file with game path",
+        "type": "shell",
+        "windows": {
+            "command": "utils\\update_game_path.ps1",
+            "args": [
+                "${input:gamePathName}"
+            ]
+        },
+        "linux": {
+            "command": "./utils/update_game_path.sh",
+            "args": [
+                "${input:gamePathName}"
+            ]
+        },
+        "problemMatcher": []
+    }
+],
+"inputs": [
+    {
+        "id": "dirname",
+        "type": "promptString",
+        "description": "The name of the script to be created"
+    },
+    {
+        "id": "gamePathName",
+        "type": "promptString",
+        "description": "Path where Space Engineers is installed"
+    }
+]
+
+}

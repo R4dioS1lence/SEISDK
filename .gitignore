@@ -1,0 +1,10 @@
+# Remove VSCode Work Enviroment Configuration Files ...
+.vscode/*
+# ... but keep Tasks (for the execution of Create and Export Tasks)
+!.vscode/tasks.json
+# and Settings for hiding the 'obj' and 'bin' folders, created by the SDK 
+!.vscode/settings.json
+
+# Remove needless SDK's files (always created automatically)
+bin/
+obj/
