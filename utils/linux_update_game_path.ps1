@@ -1,9 +1,8 @@
-
 # Set the new Game Path from the task argument
 $new_game_path = $args[0]
 
 # Get the .csproj file to change the Game Path
-$csproj_file = "$(Get-Location)\SpaceEngineers.csproj"
+$csproj_file = "$(Get-Location)/SpaceEngineers.csproj"
 
 # Sanity Debug Check
 Write-Output ".csproj file path: $csproj_file"
@@ -26,8 +25,8 @@ if ($hintPath_full_string -like '*/*') {
     # Sanity Debug Check
     Write-Output "Game Path currently set to: '$old_game_path'"
 
-    # Replace the current game path in the .csproj with the given game path (while correcting Linux path notation from paths)
-    $temp = [System.IO.File]::ReadAllText($csproj_file).Replace("$old_game_path/Bin64/", "$new_game_path\Bin64\")
+    # Replace the current game path in the .csproj with the given game path (while keeping Linux path notation from paths)
+    $temp = [System.IO.File]::ReadAllText($csproj_file).Replace($old_game_path, $new_game_path)
     [System.IO.File]::WriteAllText($csproj_file, $temp)
     
 } else {
@@ -38,8 +37,8 @@ if ($hintPath_full_string -like '*/*') {
     # Sanity Debug Check
     Write-Output "Game Path currently set to: $old_game_path"
 
-    # Replace the current game path in the .csproj with the given game path (while keeping Windows path notation from paths)
-    $temp = [System.IO.File]::ReadAllText($csproj_file).Replace($old_game_path, $new_game_path)
+    # Replace the current game path in the .csproj with the given game path (while correcting the Windows path notation from paths)
+    $temp = [System.IO.File]::ReadAllText($csproj_file).Replace("$old_game_path\Bin64\", "$new_game_path/Bin64/")
     [System.IO.File]::WriteAllText($csproj_file, $temp)
 
 }

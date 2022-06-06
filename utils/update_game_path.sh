@@ -19,7 +19,8 @@ hintPath_full_string=${hintPath_full_string/Sandbox.Common.dll\<\/HintPath\>/}
 # Sanity Debug Check
 echo "Full HintPath for Sandbox.Common.dll: $hintPath_full_string"
 
-# Didn't want to use sed, but it's bundled on fresh install
-
 # Replace current game path with provided path
 sed -i "s|$hintPath_full_string|$new_game_path/Bin64/|g" $csproj_file
+# This line above alone never worked for me, and couldn't understand why
+# Because of that, now Powershell is a requirement for Linux usage
+# Feel free to fix it, and let me know so I can drop the requierement for PowerShell on Linuxbin

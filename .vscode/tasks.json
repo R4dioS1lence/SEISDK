@@ -16,9 +16,10 @@
             ]
         },
         "linux": {
-            "command": "./utils/deploy.sh",
+            // "command": "./utils/deploy.sh",
+            "command": "./utils/linux_deploy.ps1",
             "args": [
-                "${fileDirname}\\${fileBasename}",
+                "${fileDirname}/${fileBasename}",
                 "${fileBasename}",
                 "${relativeFileDirname}"
             ]
@@ -39,7 +40,8 @@
             ]
         },
         "linux": {
-            "command": "./utils/create.sh",
+            // "command": "./utils/create.sh",
+            "command": "./utils/linux_create.ps1",
             "args": [
                 "${input:dirname}"
             ]
@@ -56,7 +58,8 @@
             ]
         },
         "linux": {
-            "command": "./utils/update_game_path.sh",
+            // "command": "./utils/update_game_path.sh",
+            "command": "./utils/linux_update_game_path.ps1",
             "args": [
                 "${input:gamePathName}"
             ]

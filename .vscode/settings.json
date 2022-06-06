@@ -9,6 +9,13 @@
     "Ingame",
     "reksar's",
     "toolkits"
-]
+],
+"[powershell]": {
+    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+    "files.encoding": "utf8bom",
+    "files.autoGuessEncoding": true
+}
 
 }

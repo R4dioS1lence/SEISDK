@@ -20,9 +20,14 @@ A "HelloWorldWithRuntime" script is given as a ready-to-deploy example. It will 
   * [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
   * [NuGet Package Manager](https://marketplace.visualstudio.com/items?itemName=jmrog.vscode-nuget-package-manager)
 * [.NET SDK](https://dotnet.microsoft.com/)
+* [PowerShell] (https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux) Automatically bundled with Windows, required for Linux
 
 VS Code requires both extensions: `C#` to make it understand C# code and apply IntelliSense; and `NuGet Package Manager` to help it understand and apply the game's DLLs via the .csproj (?).
 I'm sure about how the first one works, but the second is black magic (the best kind of magic).
+
+I tried to make bash scripts on Linux for the project, to minimize requirements, but sed wasn't working for me and I wasn't finding how to do the needed operations another way. Feel free to contribute scripts to remove that requirement.
+A bash script to automate installation of PowerShell on Linux/Ubuntu is provided. Should you use a different distro, check the provided Microsoft page.
+After installing PowerShell, make sure to change the current shell used on VS Code to PoweShell by pressing `Ctrl + Shift + P`, then select the option `Terminal: Select Default Profile` (start typing to auto-complete), then select the `pwsh` option for PowerShell
 
 ## Configuration of the Toolkit
 
@@ -55,7 +60,8 @@ If a script already exists on the destination, the older version is converted to
 
 # TO-DO List
 
-* Add Linux version of `create`, `deploy` and `update_game_path` scripts
+* Implement Ingame Script deployment on Linux
+* Change Linux-side scripts to remove requirement to install PowerShell and minimize requirements
 
 # Final Disclaimer
 
